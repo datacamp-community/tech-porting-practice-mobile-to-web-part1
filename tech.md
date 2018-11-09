@@ -2,7 +2,7 @@ _This article is part of a short series in which DataCamp’s Practice & Mobile 
 
 Keen DataCampers may have noticed that we recently launched a new version of DataCamp Practice for Web. Beyond the slick new visual theme, many of the changes were technical improvements behind the scenes.
 
-![Screenshot of New Practice Mode](images/screenshot1.png)
+<img src="images/screenshot1.png" alt="Screenshot of New Practice Mode">
 
 The technical improvements are designed to help us iterate and innovate more quickly and ultimately deliver more value to users. The most exciting part is that it’s actually a near-direct port of the practice mode that features in our own mobile app: DataCamp’s practice mode now shares the same codebase for both mobile and web!
 
@@ -10,7 +10,7 @@ The technical improvements are designed to help us iterate and innovate more qui
 
 Whilst DataCamp already had a practice mode for web, it was no longer actively being maintained and therefore not receiving the attention it deserved. Meanwhile, we developed and launched a new version of practice for [DataCamp for Mobile](https://www.datacamp.com/mobile), which focuses on learning on-the-go.
 
-![Screenshot of Legacy Practice Mode](images/screenshot2.png)
+<img src="images/screenshot2.png" alt="Screenshot of Legacy Practice Mode">
 
 Practice is a core part (literally in the middle!) of DataCamp’s Learn -> Practice -> Apply approach to teaching data science. Recently, it became a strategic goal of the Mobile Team (now Practice & Mobile Team) to take ownership of Practice in general at DataCamp in order to drive innovation and bring further value to our users.
 
@@ -26,7 +26,7 @@ Our mobile app is no exception, we rely on many modern JS tools and technologies
 
 The legacy practice for web application was also written in JS, complete with its own backend. This posed a problem: our ideal solution would not involve maintaining 2 separate backends.
 
-![Non-Unified App Architecture](images/architecture1.png)
+<img src="images/architecture1.png" alt="Non-Unified App Architecture">
 
 Our recently developed mobile backend is capable of serving up practice content, but this would involve re-writing the legacy app’s frontend to use the existing backend. This would leave us with 1 backend but 2 distinct frontends. Better, but not ideal! There are also significant differences in how each app interacts with its backend which would have presented some difficult technical challenges: the legacy app is ‘online first’ whereas the mobile app is ‘offline first’ and is designed to interact with its content offline.
 
@@ -36,11 +36,11 @@ We previously mentioned that our mobile app is written in React Native. This is 
 
 Fortunately, there are JS community efforts to bring React Native apps to the browser. One of the front-runners is [react-native-web](https://github.com/necolas/react-native-web): a port of React Native that allows you to target the DOM instead of mobile devices using the same code. In theory, this would allow us to reuse our existing codebase with minimal modification.
 
-![Unified App Architecture](images/architecture2.png)
+<img src="images/architecture2.png" alt="Unified App Architecture">
 
 We set about working on a proof-of-concept and fell into a pit of success. We were able to get a super rough version of the mobile app in a browser running very quickly:
 
-![An Early Proof of Concept](images/screenshot3.png)
+<img src="images/screenshot3.png" alt="An Early Proof of Concept">
 
 Whilst it was possible to get a proof-of-concept running quickly, the gulf between a scrappy proof-of-concept and a full-blown production app is quite large! Beyond the user interface, we had to reconsider several functional design aspects and also rework some of the underlying technical systems in order to optimise the user experience. The process of perfecting our port took a couple of months with 2 engineers and we learned a huge amount during this journey.
 
@@ -50,7 +50,7 @@ A separate article will explain some of the ins-and-outs of using react-native-w
 
 Overall, we consider our port of mobile practice to web to have been a complete success. Our early user feedback and analytics demonstrate that it is performing at least as well as the previous web version which was our initial goal. From here on, we can now rapidly innovate on our codebase and bring innovation to web and mobile simultaneously.
 
-![Practice Completed!](images/screenshot4.png)
+<img src="images/screenshot4.png" alt="Practice Completed!">
 
 We estimate that we were able to reuse 90% of our mobile components on the web and a similar amount of the business logic through our action creators, reducers and networking layer. In fact, the level of reuse was so high that early versions of the port had entire features of the mobile app accessible by the user, such as the dashboard and mobile Learn experience that we had no intention of bringing to the web.
 
