@@ -58,4 +58,4 @@ The benefits of having a shared codebase go beyond basic code reuse. Part of the
 
 We look forward to bringing out new features and improvements for DataCamp practice for both mobile and web over the next weeks and months!
 
-_Stay tuned for parts 2 and 3 which go more in-depth on the technical aspects of the project. ]Interested in working with DataCamp? [Check out our careers page!](https://www.datacamp.com/careers/)_
+_Stay tuned for parts 2 and 3 which go more in-depth on the technical aspects of the project. Interested in working with DataCamp? [Check out our careers page!](https://www.datacamp.com/careers/)_
